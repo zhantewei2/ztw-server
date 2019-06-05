@@ -1,0 +1,21 @@
+{
+  "name": "ztw-server",
+  "version": "beta0.0.1",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./demo/app.js",
+    "uat": "node ./demo/app.js uat",
+    "prod": "node ./demo/app.js prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhantewei2/ztw-server.git"
+  },
+  "author": "zhantewei",
+  "license": "ISC"
+}
