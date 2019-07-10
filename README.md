@@ -2,7 +2,7 @@ web framework for node.js
 
 
 ```js
-const {Server}=require('ztw-server');
+const {Server}=require('@ztwx/ztw-server');
 const app=new Server();
 
 app.use(async(ctx,next)=>
@@ -16,7 +16,7 @@ app.listen(3000);
 
 Before installing, download and install Node.js. Node.js 8.x or higher is required.
 ```shell
-npm install ztw-server
+npm install @ztwx/ztw-server
 
 ```
 
@@ -32,6 +32,7 @@ static(`UrlPath`,`NativeDirectory`,`Options`)
     - **memory** use memory to cache files
     - **maxAge** Cache-Control max-age
     - **callback** return file with the current settings if no file is found.
+    - **gzip**  js,css,html
 ##### Example
 ```javascript
 const {Static,Server}=require('ztw-server')

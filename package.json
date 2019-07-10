@@ -1,6 +1,6 @@
 {
-  "name": "ztw-server",
-  "version": "beta0.0.1",
+  "name": "@ztwx/ztw-server",
+  "version": "0.0.3",
   "description": "",
   "main": "main.js",
   "dependencies": {

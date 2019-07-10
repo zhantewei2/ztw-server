@@ -15,8 +15,9 @@ module.exports=(
 	urlPath=urlPath||'/';
 	const urlPathLen=urlPath.length;
 	const handle_url=(url)=>{
+ 
 	  if( url.indexOf(urlPath)===0 ){
-	    return url.slice(urlPathLen);
+      return url.slice(urlPathLen);
     }else{
 	    return false;
     }
@@ -60,7 +61,7 @@ module.exports=(
       try {
         const {type,extension}=getType({name:relPath});
         const stat=await run_promise(fs.lstat,realPath);
-        if(!stat)throw new ErrNotFound('empty');
+        if(!stat||stat.isDirectory())throw new ErrNotFound('empty');
         stat.extension=extension;
         await run(stat,ctx,end,{realPath,ctx,type})
       }catch(e){
@@ -80,5 +81,4 @@ module.exports=(
       }
 	  }
   }
-
 };
